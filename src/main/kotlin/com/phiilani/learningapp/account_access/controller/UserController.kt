@@ -1,19 +1,14 @@
-package com.phiilani.learningapp.controller
+package com.phiilani.learningapp.account_access.controller
 
 import org.springframework.web.bind.annotation.*
-import com.phiilani.learningapp.dto.CreateUserRequest
-import com.phiilani.learningapp.service.UserService
+import com.phiilani.learningapp.account_access.dto.RegisterRequest
+import com.phiilani.learningapp.account_access.service.UserService
 import jakarta.validation.Valid
 import org.springframework.http.HttpStatus
 
 @RestController
 @RequestMapping("/users")
 class UserController(private val service: UserService) {
-
-    @ResponseStatus(HttpStatus.CREATED)
-    @PostMapping
-    fun create(@Valid @RequestBody request: CreateUserRequest) =
-        service.createUser(request)
 
     @GetMapping
     fun getAll() = service.getUsers()
@@ -23,4 +18,7 @@ class UserController(private val service: UserService) {
 
     @GetMapping("/id/{id}")
     fun getUserById(@PathVariable id: String) = service.getUserById(id)
+
+    @DeleteMapping("/id/{id}")
+    fun deleteUserById(@PathVariable id: String) = service.deleteUserById(id)
 }

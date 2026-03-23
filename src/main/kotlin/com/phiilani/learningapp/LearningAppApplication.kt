@@ -5,7 +5,7 @@ import org.springframework.boot.runApplication
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories
 
 @SpringBootApplication
-@EnableMongoRepositories(basePackages = ["com.phiilani.learningapp.repository"])
+@EnableMongoRepositories(basePackages = ["com.phiilani.learningapp.account_access.repository"])
 class LearningAppApplication
 
 fun main(args: Array<String>) {

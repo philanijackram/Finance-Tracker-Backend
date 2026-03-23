@@ -1,4 +1,4 @@
-package com.phiilani.learningapp.model
+package com.phiilani.learningapp.account_access.model
 
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
@@ -8,5 +8,6 @@ data class User(
     @Id
     val id: String? = null,
     val name: String,
-    val email: String
+    val email: String,
+    val password: String
 )

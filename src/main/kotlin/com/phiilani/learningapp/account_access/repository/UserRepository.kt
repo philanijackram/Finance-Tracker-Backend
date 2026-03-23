@@ -1,6 +1,6 @@
-package com.phiilani.learningapp.repository
+package com.phiilani.learningapp.account_access.repository
 
-import com.phiilani.learningapp.model.User
+import com.phiilani.learningapp.account_access.model.User
 import org.springframework.data.mongodb.repository.MongoRepository
 import org.springframework.stereotype.Repository
 
