@@ -24,6 +24,18 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.springframework.session:spring-session-data-mongodb")
+
+    // Jakarta Validation API
+    implementation("jakarta.validation:jakarta.validation-api:3.0.2")
+
+    // Hibernate Validator implementation (optional but needed to actually validate)
+    implementation("org.hibernate.validator:hibernate-validator:8.0.1.Final")
+
+    // If using Jakarta Expression Language (EL) for some constraints
+    implementation("org.glassfish:jakarta.el:4.0.2")
+
+    implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
+
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")

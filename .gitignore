@@ -38,3 +38,40 @@ out/
 
 ### Kotlin ###
 .kotlin
+
+# ==============================
+# 🔥 ADDITIONS (IMPORTANT)
+# ==============================
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment variables (DO NOT COMMIT 🔥)
+.env
+.env.*
+
+# Spring profiles (keep only application.yml in repo)
+application-local.yml
+application-dev.yml
+application-prod.yml
+
+# Secrets / Keys (CRITICAL 🚨)
+*.key
+*.pem
+*.jks
+*.p12
+*.keystore
+
+# Compiled files
+*.class
+
+# Misc temp files
+*.swp
+*.swo
+
+# Docker (optional override files)
+docker-compose.override.yml
